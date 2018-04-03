@@ -1,0 +1,37 @@
+{
+  "name": "new-willow-test",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "scss": "node-sass styles/styles.scss styles/styles.min.css",
+    "autoprefixer": "postcss -u autoprefixer -r styles/*.css",
+    "build:css": "npm run scss && npm run autoprefixer",
+    "watch:css": "onchange 'styles/*.scss' -- npm run build:css",
+    "serve": "browser-sync start --server --files 'styles/*.css' 'index.html'",
+    "watch": "parallelshell 'npm run serve' 'npm run watch:css'"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Keale2/new-willow-test.git"
+  },
+  "author": "Kyle Wagner <Keale2@gmail.com>",
+  "license": "GPL-3.0",
+  "bugs": {
+    "url": "https://github.com/Keale2/new-willow-test/issues"
+  },
+  "homepage": "https://github.com/Keale2/new-willow-test#readme",
+  "devDependencies": {
+    "@unumux/stylelint-config-unumux": "^2.0.1",
+    "@unumux/theme-unum-default": "^1.0.0",
+    "@unumux/willow": "^1.0.1",
+    "autoprefixer": "^8.2.0",
+    "browser-sync": "^2.23.6",
+    "node-sass": "^4.8.3",
+    "onchange": "^3.3.0",
+    "parallelshell": "^3.0.2",
+    "postcss-cli": "^5.0.0",
+    "stylelint": "^9.2.0"
+  }
+}
