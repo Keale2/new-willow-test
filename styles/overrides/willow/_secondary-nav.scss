@@ -1,0 +1,12 @@
+.willow-secondary-nav {
+    &__link {
+        font-weight: 400;
+
+        .willow-secondary-nav__item:nth-child(even) & {
+            background-color: darken(
+                $component-secondary-nav-background-color,
+                8
+            );
+        }
+    }
+}

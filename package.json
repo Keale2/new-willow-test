@@ -8,7 +8,7 @@
     "scss": "node-sass styles/styles.scss styles/styles.min.css",
     "autoprefixer": "postcss -u autoprefixer -r styles/*.css",
     "build:css": "npm run scss && npm run autoprefixer",
-    "watch:css": "onchange 'styles/*.scss' -- npm run build:css",
+    "watch:css": "onchange 'styles/**/*.scss' -- npm run build:css",
     "serve": "browser-sync start --server --files 'styles/*.css' 'index.html'",
     "watch": "parallelshell 'npm run serve' 'npm run watch:css'"
   },

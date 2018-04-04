@@ -1,5 +1,6 @@
-@import "node_modules/@unumux/willow/styles";
+@import "node_modules/@unumux/theme-unum-default/styles";
+$component-secondary-nav-border: $component-border-width solid
+    darken($component-secondary-nav-background-color, 8);
 
-body {
-    background-color: #ff0;
-}
+@import "node_modules/@unumux/willow/styles";
+@import "overrides/overrides";
